@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Đăng nhập</title>
+
+    <style>
+        form {
+            width: 350px;
+            margin: 20px auto;
+        }
+
+        table {
+            width: 100%;
+            background-color: #cceeff;
+        }
+
+        td {
+            border: 1px solid gray;
+            padding: 4px;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 165px;
+        }
+
+        #ketqua {
+            color: blue;
+            text-align: center;
+        }
+
+        h2 {
+            color: brown;
+            text-align: center;
+        }
+    </style>
+
+    <script>
+        function dongy() {
+            document.getElementById("ketqua").innerText =
+                document.getElementById("manguoidung").value;
+        }
+    </script>
+</head>
+
+<body>
+
+<form>
+    <h2>Đăng nhập</h2>
+
+    <table>
+        <tr>
+            <td>Mã người dùng:</td>
+            <td>
+                <input type="text" id="manguoidung">
+            </td>
+        </tr>
+
+        <tr>
+            <td>Mật khẩu:</td>
+            <td>
+                <input type="password" id="matkhau">
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="2" style="text-align:center;">
+                <input type="button"
+                       id="nutdongy"
+                       value="Đồng ý"
+                       onclick="dongy()">
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="2">
+                <div id="ketqua"></div>
+            </td>
+        </tr>
+    </table>
+</form>
+
+</body>
+</html>
